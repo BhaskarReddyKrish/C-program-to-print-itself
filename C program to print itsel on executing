@@ -1,0 +1,27 @@
+/* A C program that prints its source code.
+Author: Bhaskar Reddy Krishnamareddypalli
+date:27 June 2018  */
+
+#include <stdio.h>
+ void code();
+int main(void)
+{
+    code();
+    return 0;
+}
+void code()
+{
+    char c; 
+    FILE *fp = fopen(__FILE__, "r");
+    
+    printf("*******************************\n");
+    
+    for(;c !=EOF;)
+    {
+        c = fgetc(fp);
+        putchar(c);
+    }
+    fclose(fp);
+    printf("*******************************\n");
+    
+}
